@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StonkTrack</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0d0d0d;color:#e8e8e8;padding:1rem;}
+.hdr{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;}
+.logo{font-size:18px;font-weight:600;color:#fff;}
+.logo span{color:#00d4a8;}
+.meta{font-size:11px;color:#666;text-align:right;}
+.meta .fresh{color:#00d4a8;}
+.setup-box{background:#1a1a1a;border:1px solid #333;border-radius:8px;padding:14px 16px;margin-bottom:14px;font-size:12px;line-height:1.8;color:#aaa;}
+.setup-box strong{color:#e8e8e8;}
+.setup-box code{background:#111;padding:1px 6px;border-radius:3px;font-family:monospace;color:#00d4a8;font-size:11px;}
+.inp-row{display:flex;gap:8px;margin:8px 0 4px;}
+.inp-row input{flex:1;background:#111;border:1px solid #333;border-radius:6px;padding:6px 10px;color:#e8e8e8;font-size:12px;}
+.inp-row input:focus{outline:none;border-color:#00d4a8;}
+.inp-row button{padding:6px 14px;background:#00d4a8;border:none;border-radius:6px;color:#021a14;font-size:12px;font-weight:600;cursor:pointer;}
+.summary{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:14px;}
+.sum-card{background:#1a1a1a;border-radius:8px;padding:10px 12px;}
+.sum-lbl{font-size:10px;color:#666;margin-bottom:3px;}
+.sum-val{font-size:20px;font-weight:600;}
+.sum-sub{font-size:10px;color:#555;margin-top:1px;}
+.fr{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px;}
+.fp{font-size:11px;padding:3px 10px;border:1px solid #333;border-radius:20px;cursor:pointer;color:#666;background:none;}
+.fp:hover{border-color:#555;color:#aaa;}
+.fp.active{border-color:#00d4a8;color:#00d4a8;background:rgba(0,212,168,.08);}
+.fp.kr{border-color:#b8860b;color:#b8860b;}
+.fp.kr.active{background:rgba(255,215,0,.1);}
+.lists{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+@media(max-width:600px){.lists{grid-template-columns:1fr;}.summary{grid-template-columns:1fr 1fr;}}
+.col-hdr{font-size:13px;font-weight:600;color:#fff;border-bottom:1px solid #222;padding-bottom:8px;margin-bottom:10px;display:flex;justify-content:space-between;}
+.col-hdr span{font-size:10px;color:#555;font-weight:400;}
+.sec-lbl{font-size:9px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:#555;margin:12px 0 6px;display:flex;align-items:center;gap:5px;}
+.sec-n{background:rgba(0,212,168,.12);color:#00d4a8;border-radius:20px;padding:1px 7px;font-size:9px;text-transform:none;letter-spacing:0;}
+.card{background:#1a1a1a;border:1px solid #252525;border-radius:10px;padding:10px 12px;margin-bottom:6px;transition:border-color .1s;}
+.card:hover{border-color:#333;}
+.card.strong{border-color:rgba(0,212,168,.4);}
+.card.watch{border-color:rgba(255,215,0,.3);}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:7px;}
+.sym{font-size:14px;font-weight:700;color:#fff;}
+.co-n{font-size:10px;color:#555;margin-top:1px;}
+.tags{display:flex;gap:3px;margin-top:3px;flex-wrap:wrap;}
+.tag{font-size:8px;padding:1px 5px;border-radius:3px;font-weight:600;}
+.tag-us{background:rgba(42,120,214,.15);color:#5a9fd4;}
+.tag-se{background:rgba(0,212,168,.12);color:#00d4a8;}
+.tag-fn{background:rgba(142,121,229,.15);color:#9085e9;}
+.tag-cat{background:#111;border:1px solid #2a2a2a;color:#555;}
+.score-wrap{text-align:right;flex-shrink:0;}
+.score-num{font-size:26px;font-weight:700;line-height:1;}
+.score-lbl{font-size:8px;color:#555;}
+.gates{display:flex;gap:3px;justify-content:flex-end;margin-top:3px;}
+.gate{font-size:8px;padding:1px 5px;border-radius:3px;font-weight:600;}
+.gate.pass{background:rgba(0,212,168,.15);color:#00d4a8;}
+.gate.fail{background:rgba(227,73,72,.12);color:#e34948;}
+.bars{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin:5px 0 7px;}
+.bar-lbl{font-size:8px;color:#555;display:flex;justify-content:space-between;margin-bottom:2px;}
+.bar-t{height:3px;background:#252525;border-radius:2px;overflow:hidden;}
+.bar-f{height:3px;border-radius:2px;}
+.stats{display:flex;gap:0;border-top:1px solid #222;padding-top:6px;margin-top:2px;}
+.st{flex:1;text-align:center;}
+.stv{font-size:11px;font-weight:600;font-variant-numeric:tabular-nums;}
+.stl{font-size:8px;color:#555;margin-top:1px;}
+.news-row{font-size:9px;color:#555;margin-top:4px;display:flex;align-items:flex-start;gap:4px;line-height:1.4;}
+.nd{width:5px;height:5px;border-radius:50%;flex-shrink:0;margin-top:2px;}
+.stars{display:flex;gap:1px;justify-content:flex-end;margin-top:2px;}
+.star{font-size:9px;color:#ffd700;}
+.star.e{color:#2a2a2a;}
+.fresh-tag{font-size:8px;padding:1px 5px;border-radius:20px;}
+.fresh-live{background:rgba(0,212,168,.12);color:#00d4a8;}
+.fresh-old{background:rgba(237,161,0,.1);color:#b8860b;}
+.empty-c{text-align:center;padding:2rem 1rem;color:#555;font-size:11px;}
+.loading{text-align:center;padding:3rem;color:#555;}
+.err-box{background:rgba(227,73,72,.08);border:1px solid rgba(227,73,72,.3);border-radius:8px;padding:12px 14px;color:#e34948;font-size:12px;margin-bottom:12px;line-height:1.6;}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div>
+    <div class="logo">Stonk<span>Track</span></div>
+    <div style="font-size:11px;color:#555;margin-top:2px;">Robotics & AI · Buzz + Köprek · US & Swedish markets</div>
+  </div>
+  <div class="meta" id="meta">Loading...</div>
+</div>
+
+<div class="setup-box" id="setupBox">
+  <strong>First-time setup:</strong> Enter your GitHub repo URL below so the dashboard can read the daily poll results.<br>
+  Format: <code>https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/data/results.json</code>
+  <div class="inp-row">
+    <input id="repoUrl" placeholder="https://raw.githubusercontent.com/..." value="">
+    <button onclick="saveUrl()">Save</button>
+  </div>
+  <div style="margin-top:6px;font-size:10px;color:#555;">
+    This URL is saved in your browser. The GitHub Actions workflow updates results.json every weekday at 07:00 Stockholm time.
+  </div>
+</div>
+
+<div id="errBox" style="display:none;" class="err-box"></div>
+
+<div class="summary" id="summary" style="display:none;">
+  <div class="sum-card"><div class="sum-lbl">Tickers scanned</div><div class="sum-val" id="s-total">—</div><div class="sum-sub">last poll</div></div>
+  <div class="sum-card"><div class="sum-lbl">⭐ Strong buys</div><div class="sum-val" id="s-strong" style="color:#00d4a8;">—</div><div class="sum-sub">all 3 gates</div></div>
+  <div class="sum-card"><div class="sum-lbl">👀 Watch list</div><div class="sum-val" id="s-watch" style="color:#ffd700;">—</div><div class="sum-sub">1–2 gates</div></div>
+  <div class="sum-card"><div class="sum-lbl">Top pick</div><div class="sum-val" id="s-top" style="color:#00d4a8;font-size:14px;">—</div><div class="sum-sub" id="s-top-score">—</div></div>
+</div>
+
+<div class="fr">
+  <div class="fp kr active" onclick="setF('strong',this)">⭐ Strong buy</div>
+  <div class="fp" onclick="setF('all',this)">All</div>
+  <div class="fp" onclick="setF('watch',this)">👀 Watch</div>
+  <div class="fp" onclick="setF('us',this)">🇺🇸 US NASDAQ</div>
+  <div class="fp" onclick="setF('se',this)">🇸🇪 Stockholm</div>
+  <div class="fp" onclick="setF('fn',this)">🇸🇪 First North</div>
+  <div class="fp" onclick="setF('drone',this)">Drone</div>
+  <div class="fp" onclick="setF('space',this)">Space</div>
+  <div class="fp" onclick="setF('quantum',this)">Quantum</div>
+  <div class="fp" onclick="setF('chips',this)">Chips</div>
+  <div class="fp" onclick="setF('ai',this)">AI</div>
+  <div class="fp" onclick="setF('humanoid',this)">Humanoid</div>
+</div>
+
+<div id="loading" class="loading">Loading poll results...</div>
+<div class="lists" id="lists" style="display:none;"></div>
+
+<script>
+const CAT_COL={humanoid:'#00d4a8',drone:'#9085e9',autonomous:'#eda100',ai:'#2a78d6',quantum:'#e87ba4',chips:'#eb6834',space:'#1baf7a'};
+let allData=[];
+let activeF='strong';
+const DEFAULT_URL_KEY='stonktrack_url';
+
+function saveUrl(){
+  const v=document.getElementById('repoUrl').value.trim();
+  if(!v){alert('Enter the GitHub raw URL');return;}
+  localStorage.setItem(DEFAULT_URL_KEY,v);
+  loadData(v);
+}
+
+function scoreCol(s){return s>=75?'#00d4a8':s>=60?'#ffd700':s>=40?'#2a78d6':'#666';}
+function stars(s){const n=Math.round(s/20);return Array(5).fill(0).map((_,i)=>`<span class="star ${i<n?'':'e'}">${i<n?'★':'☆'}</span>`).join('');}
+function fmtN(n){if(!n&&n!==0)return'—';if(n>=1000)return(n/1000).toFixed(0)+'K';return String(Math.round(n));}
+function setF(f,el){activeF=f;document.querySelectorAll('.fp').forEach(p=>p.classList.remove('active'));el.classList.add('active');renderAll();}
+
+function freshTag(ts){
+  if(!ts)return`<span class="fresh-tag fresh-old">no data</span>`;
+  const now=new Date();
+  const then=new Date(ts);
+  const diffMin=Math.round((now-then)/60000);
+  if(diffMin<60)return`<span class="fresh-tag fresh-live">● ${diffMin}min ago</span>`;
+  const diffH=Math.round(diffMin/60);
+  if(diffH<24)return`<span class="fresh-tag fresh-live">● ${diffH}h ago</span>`;
+  return`<span class="fresh-tag fresh-old">● ${Math.round(diffH/24)}d ago</span>`;
+}
+
+async function loadData(url){
+  document.getElementById('loading').textContent='Fetching latest poll results...';
+  document.getElementById('errBox').style.display='none';
+  try{
+    const r=await fetch(url+'?t='+Date.now());
+    if(!r.ok)throw new Error(`HTTP ${r.status} — check your URL`);
+    const d=await r.json();
+    allData=d.results||[];
+
+    const genAt=new Date(d.generated_at);
+    const diffMin=Math.round((Date.now()-genAt)/60000);
+    const ageStr=diffMin<60?diffMin+'min ago':Math.round(diffMin/60)+'h ago';
+    document.getElementById('meta').innerHTML=`Last poll: <span class="fresh">${ageStr}</span><br>${d.ticker_count} tickers`;
+
+    const strong=allData.filter(r=>r.is_strong);
+    const watch=allData.filter(r=>r.is_watch);
+    const best=allData.slice().sort((a,b)=>(b.total||0)-(a.total||0))[0];
+    document.getElementById('s-total').textContent=d.ticker_count;
+    document.getElementById('s-strong').textContent=strong.length;
+    document.getElementById('s-watch').textContent=watch.length;
+    document.getElementById('s-top').textContent=best?best.s:'—';
+    document.getElementById('s-top-score').textContent=best?best.total+'/100':'';
+    document.getElementById('summary').style.display='grid';
+    document.getElementById('setupBox').style.display='none';
+    document.getElementById('loading').style.display='none';
+    renderAll();
+  }catch(e){
+    document.getElementById('loading').style.display='none';
+    document.getElementById('errBox').style.display='block';
+    document.getElementById('errBox').textContent=`Could not load results: ${e.message}. Check your GitHub raw URL is correct and the workflow has run at least once.`;
+  }
+}
+
+function cardHTML(r){
+  const col=scoreCol(r.total||0);
+  const cls=r.is_strong?'card strong':r.is_watch?'card watch':'card';
+  const catCol=CAT_COL[r.c]||'#666';
+  const exTag=r.ex==='fn'?`<span class="tag tag-fn">First North</span>`:r.ex==='se'?`<span class="tag tag-se">Stockholm</span>`:`<span class="tag tag-us">NASDAQ</span>`;
+  const spkCol=(r.mention_spike||0)>=100?'#00d4a8':(r.mention_spike||0)>=0?'#5a9fd4':'#e34948';
+  const spkSign=(r.mention_spike||0)>=0?'+':'';
+  const buzz=r.buzz||0,koprek=r.koprek||0,total=r.total||0;
+
+  return`<div class="${cls}">
+    <div class="card-top">
+      <div>
+        <div class="sym">${r.s}</div>
+        <div class="co-n">${r.n}</div>
+        <div class="tags">${exTag}<span class="tag tag-cat" style="color:${catCol};">${r.c}</span>${freshTag(r.fetched_at)}</div>
+      </div>
+      <div class="score-wrap">
+        <div class="score-num" style="color:${col};">${total}</div>
+        <div class="score-lbl">/100</div>
+        <div class="stars">${stars(total)}</div>
+        <div class="gates">
+          <span class="gate ${buzz>=30?'pass':'fail'}">buzz ${buzz}</span>
+          <span class="gate ${koprek>=30?'pass':'fail'}">kr ${koprek}</span>
+          <span class="gate ${r.good_news?'pass':'fail'}">news</span>
+        </div>
+      </div>
+    </div>
+    <div class="bars">
+      <div>
+        <div class="bar-lbl"><span>Buzz (Reddit)</span><span style="color:${buzz>=30?'#00d4a8':'#e34948'}">${buzz}/50</span></div>
+        <div class="bar-t"><div class="bar-f" style="width:${(buzz/50)*100}%;background:${buzz>=30?'#00d4a8':'#e34948'};"></div></div>
+      </div>
+      <div>
+        <div class="bar-lbl"><span>Köprek (News)</span><span style="color:${koprek>=30?'#ffd700':'#e34948'}">${koprek}/50</span></div>
+        <div class="bar-t"><div class="bar-f" style="width:${(koprek/50)*100}%;background:${koprek>=30?'#ffd700':'#e34948'};"></div></div>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="st"><div class="stv" style="color:${spkCol};">${spkSign}${r.mention_spike||0}%</div><div class="stl">vs last month</div></div>
+      <div class="st"><div class="stv">${fmtN(r.reddit_mentions)}</div><div class="stl">mentions now</div></div>
+      <div class="st"><div class="stv" style="color:${(r.bullish_pct||0)>=50?'#00d4a8':'#666'}">${r.bullish_pct||0}%</div><div class="stl">bullish</div></div>
+      <div class="st"><div class="stv" style="color:${r.trend==='rising'?'#00d4a8':r.trend==='falling'?'#e34948':'#555'}">${r.trend||'—'}</div><div class="stl">trend</div></div>
+    </div>
+    <div class="news-row">
+      <span class="nd" style="background:${r.good_news?'#00d4a8':'#444'};"></span>
+      <span>${r.good_news?`News: ${r.news_bullish_pct||0}% bullish · ${fmtN(r.news_mentions)} articles this month`:'No bullish news — köprek gate fails'}</span>
+    </div>
+  </div>`;
+}
+
+function renderCol(data,title,flag){
+  const strong=data.filter(r=>r.is_strong).sort((a,b)=>(b.total||0)-(a.total||0));
+  const watch=data.filter(r=>r.is_watch).sort((a,b)=>(b.total||0)-(a.total||0));
+  const rest=data.filter(r=>!r.is_strong&&!r.is_watch).sort((a,b)=>(b.total||0)-(a.total||0));
+  let h=`<div class="col-hdr">${flag} ${title}<span>${data.length} tickers</span></div>`;
+  if(strong.length)h+=`<div class="sec-lbl">⭐ Strong buy <span class="sec-n">${strong.length}</span></div>${strong.map(cardHTML).join('')}`;
+  else h+=`<div class="sec-lbl">Strong buy</div><div class="empty-c">None pass all 3 gates</div>`;
+  if(watch.length)h+=`<div class="sec-lbl">👀 Watch <span class="sec-n">${watch.length}</span></div>${watch.map(cardHTML).join('')}`;
+  if(rest.length)h+=`<div class="sec-lbl">Others <span class="sec-n">${rest.length}</span></div>${rest.map(cardHTML).join('')}`;
+  return h;
+}
+
+function renderAll(){
+  let f=[...allData];
+  if(activeF==='strong')f=f.filter(r=>r.is_strong);
+  else if(activeF==='watch')f=f.filter(r=>r.is_watch);
+  else if(['us','se','fn'].includes(activeF))f=f.filter(r=>r.ex===activeF);
+  else if(activeF!=='all')f=f.filter(r=>r.c===activeF);
+  f.sort((a,b)=>(b.total||0)-(a.total||0));
+
+  const us=f.filter(r=>!['se','fn'].includes(r.ex));
+  const se=f.filter(r=>['se','fn'].includes(r.ex));
+  const el=document.getElementById('lists');
+  el.style.display='grid';
+  el.innerHTML=`<div>${renderCol(us,'US NASDAQ','🇺🇸')}</div><div>${renderCol(se,'Stockholm & First North','🇸🇪')}</div>`;
+}
+
+// Init
+const savedUrl=localStorage.getItem(DEFAULT_URL_KEY);
+if(savedUrl){
+  document.getElementById('repoUrl').value=savedUrl;
+  loadData(savedUrl);
+}else{
+  document.getElementById('loading').style.display='none';
+}
+</script>
+</body>
+</html>
