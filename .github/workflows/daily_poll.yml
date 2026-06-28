@@ -1,0 +1,37 @@
+name: Daily StonkTrack Poll
+
+on:
+  schedule:
+    - cron: '0 5 * * 1-5'
+  workflow_dispatch:
+
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run poll
+        env:
+          ADANOS_KEY: ${{ secrets.ADANOS_KEY }}
+        run: python poll.py
+
+      - name: Commit results
+        run: |
+          git config user.name  "StonkTrack Bot"
+          git config user.email "bot@stonktrack"
+          git add data/results.json
+          git diff --staged --quiet || git commit -m "Daily poll $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
