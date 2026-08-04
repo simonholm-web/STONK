@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-03T08:30:24.891980+00:00",
+  "generated_at": "2026-08-04T07:40:59.167073+00:00",
   "ticker_count": 53,
   "strong_buys": 0,
   "results": [
@@ -25,7 +25,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:06.717339+00:00"
+      "fetched_at": "2026-08-04T07:38:58.461943+00:00"
     },
     {
       "s": "ONDS",
@@ -49,7 +49,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:09.401229+00:00"
+      "fetched_at": "2026-08-04T07:39:00.879610+00:00"
     },
     {
       "s": "ACHR",
@@ -73,7 +73,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:12.035602+00:00"
+      "fetched_at": "2026-08-04T07:39:03.409399+00:00"
     },
     {
       "s": "JOBY",
@@ -97,7 +97,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:14.696602+00:00"
+      "fetched_at": "2026-08-04T07:39:06.019537+00:00"
     },
     {
       "s": "KTOS",
@@ -121,7 +121,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:17.344319+00:00"
+      "fetched_at": "2026-08-04T07:39:08.349587+00:00"
     },
     {
       "s": "AVAV",
@@ -145,7 +145,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:19.999304+00:00"
+      "fetched_at": "2026-08-04T07:39:10.973855+00:00"
     },
     {
       "s": "MNTS",
@@ -169,7 +169,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:22.633171+00:00"
+      "fetched_at": "2026-08-04T07:39:13.309076+00:00"
     },
     {
       "s": "RKLB",
@@ -193,7 +193,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:25.300347+00:00"
+      "fetched_at": "2026-08-04T07:39:15.718584+00:00"
     },
     {
       "s": "ASTS",
@@ -217,7 +217,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:27.943796+00:00"
+      "fetched_at": "2026-08-04T07:39:18.006834+00:00"
     },
     {
       "s": "LUNR",
@@ -241,7 +241,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:30.601030+00:00"
+      "fetched_at": "2026-08-04T07:39:20.306816+00:00"
     },
     {
       "s": "IONQ",
@@ -265,7 +265,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:33.256674+00:00"
+      "fetched_at": "2026-08-04T07:39:22.609053+00:00"
     },
     {
       "s": "QBTS",
@@ -289,7 +289,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:35.905075+00:00"
+      "fetched_at": "2026-08-04T07:39:24.888632+00:00"
     },
     {
       "s": "RGTI",
@@ -313,7 +313,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:38.526243+00:00"
+      "fetched_at": "2026-08-04T07:39:27.371364+00:00"
     },
     {
       "s": "QUBT",
@@ -337,7 +337,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:41.175416+00:00"
+      "fetched_at": "2026-08-04T07:39:29.679512+00:00"
     },
     {
       "s": "CBRS",
@@ -361,7 +361,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:43.862280+00:00"
+      "fetched_at": "2026-08-04T07:39:31.953148+00:00"
     },
     {
       "s": "POET",
@@ -385,7 +385,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:46.492470+00:00"
+      "fetched_at": "2026-08-04T07:39:34.243958+00:00"
     },
     {
       "s": "KOPN",
@@ -409,7 +409,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:49.106121+00:00"
+      "fetched_at": "2026-08-04T07:39:36.530512+00:00"
     },
     {
       "s": "INDI",
@@ -433,7 +433,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:51.774674+00:00"
+      "fetched_at": "2026-08-04T07:39:38.827017+00:00"
     },
     {
       "s": "AEVA",
@@ -457,7 +457,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:54.419588+00:00"
+      "fetched_at": "2026-08-04T07:39:41.110620+00:00"
     },
     {
       "s": "LAZR",
@@ -481,7 +481,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:57.055595+00:00"
+      "fetched_at": "2026-08-04T07:39:43.402494+00:00"
     },
     {
       "s": "AUR",
@@ -505,7 +505,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:28:59.728643+00:00"
+      "fetched_at": "2026-08-04T07:39:45.870998+00:00"
     },
     {
       "s": "OUST",
@@ -529,7 +529,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:02.341494+00:00"
+      "fetched_at": "2026-08-04T07:39:48.163827+00:00"
     },
     {
       "s": "MVIS",
@@ -553,7 +553,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:05.002431+00:00"
+      "fetched_at": "2026-08-04T07:39:50.452718+00:00"
     },
     {
       "s": "ARBE",
@@ -577,7 +577,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:07.675203+00:00"
+      "fetched_at": "2026-08-04T07:39:52.750221+00:00"
     },
     {
       "s": "SERV",
@@ -601,7 +601,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:10.313336+00:00"
+      "fetched_at": "2026-08-04T07:39:55.042260+00:00"
     },
     {
       "s": "RR",
@@ -625,7 +625,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:12.945987+00:00"
+      "fetched_at": "2026-08-04T07:39:57.322107+00:00"
     },
     {
       "s": "KSCP",
@@ -649,7 +649,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:15.620473+00:00"
+      "fetched_at": "2026-08-04T07:39:59.609428+00:00"
     },
     {
       "s": "BBAI",
@@ -673,7 +673,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:18.259505+00:00"
+      "fetched_at": "2026-08-04T07:40:01.918212+00:00"
     },
     {
       "s": "SOUN",
@@ -697,7 +697,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:20.905951+00:00"
+      "fetched_at": "2026-08-04T07:40:04.195484+00:00"
     },
     {
       "s": "KULR",
@@ -721,7 +721,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:23.580341+00:00"
+      "fetched_at": "2026-08-04T07:40:06.492361+00:00"
     },
     {
       "s": "UPST",
@@ -745,7 +745,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:26.225502+00:00"
+      "fetched_at": "2026-08-04T07:40:08.781612+00:00"
     },
     {
       "s": "NET",
@@ -769,7 +769,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:28.852740+00:00"
+      "fetched_at": "2026-08-04T07:40:11.074038+00:00"
     },
     {
       "s": "CRWD",
@@ -793,7 +793,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:31.523535+00:00"
+      "fetched_at": "2026-08-04T07:40:13.365581+00:00"
     },
     {
       "s": "AI",
@@ -817,7 +817,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:34.164492+00:00"
+      "fetched_at": "2026-08-04T07:40:15.671679+00:00"
     },
     {
       "s": "MNDY",
@@ -841,7 +841,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:36.795030+00:00"
+      "fetched_at": "2026-08-04T07:40:17.961513+00:00"
     },
     {
       "s": "HEXA-B",
@@ -865,7 +865,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:39.459106+00:00"
+      "fetched_at": "2026-08-04T07:40:20.258768+00:00"
     },
     {
       "s": "MYCR",
@@ -889,7 +889,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:42.126335+00:00"
+      "fetched_at": "2026-08-04T07:40:22.543603+00:00"
     },
     {
       "s": "SAAB-B",
@@ -913,7 +913,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:45.113831+00:00"
+      "fetched_at": "2026-08-04T07:40:24.831063+00:00"
     },
     {
       "s": "TOBII",
@@ -937,7 +937,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:47.792793+00:00"
+      "fetched_at": "2026-08-04T07:40:27.118535+00:00"
     },
     {
       "s": "SIVERS",
@@ -961,7 +961,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:50.430006+00:00"
+      "fetched_at": "2026-08-04T07:40:29.412266+00:00"
     },
     {
       "s": "SINCH",
@@ -985,7 +985,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:53.062330+00:00"
+      "fetched_at": "2026-08-04T07:40:31.694754+00:00"
     },
     {
       "s": "EVO",
@@ -1009,7 +1009,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:55.744755+00:00"
+      "fetched_at": "2026-08-04T07:40:33.983131+00:00"
     },
     {
       "s": "ATCO-A",
@@ -1033,7 +1033,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:29:58.390897+00:00"
+      "fetched_at": "2026-08-04T07:40:36.266154+00:00"
     },
     {
       "s": "HUSQ-B",
@@ -1057,7 +1057,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:30:01.026124+00:00"
+      "fetched_at": "2026-08-04T07:40:38.554782+00:00"
     },
     {
       "s": "VITEC",
@@ -1081,7 +1081,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:30:03.709386+00:00"
+      "fetched_at": "2026-08-04T07:40:40.845675+00:00"
     },
     {
       "s": "NCAB",
@@ -1105,7 +1105,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:30:06.325296+00:00"
+      "fetched_at": "2026-08-04T07:40:43.120400+00:00"
     },
     {
       "s": "NIBE-B",
@@ -1129,7 +1129,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:30:08.967676+00:00"
+      "fetched_at": "2026-08-04T07:40:45.415949+00:00"
     },
     {
       "s": "BURE",
@@ -1153,7 +1153,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:30:11.647683+00:00"
+      "fetched_at": "2026-08-04T07:40:47.722971+00:00"
     },
     {
       "s": "EKOBOT",
@@ -1177,7 +1177,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:30:14.288155+00:00"
+      "fetched_at": "2026-08-04T07:40:50.010805+00:00"
     },
     {
       "s": "CELLINK",
@@ -1201,7 +1201,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:30:16.930605+00:00"
+      "fetched_at": "2026-08-04T07:40:52.298171+00:00"
     },
     {
       "s": "IMINT",
@@ -1225,7 +1225,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:30:19.593924+00:00"
+      "fetched_at": "2026-08-04T07:40:54.589860+00:00"
     },
     {
       "s": "NEONODE",
@@ -1249,7 +1249,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:30:22.246162+00:00"
+      "fetched_at": "2026-08-04T07:40:56.890672+00:00"
     },
     {
       "s": "CLAVISTER",
@@ -1273,7 +1273,7 @@
       "is_watch": false,
       "good_news": false,
       "mention_spike": 0,
-      "fetched_at": "2026-08-03T08:30:24.891949+00:00"
+      "fetched_at": "2026-08-04T07:40:59.167046+00:00"
     }
   ]
 }
